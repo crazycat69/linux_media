@@ -469,36 +469,44 @@ struct tbsecp3_board tbsecp3_boards[] = {
 			{
 				.ts_in = 0,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 				.gpio.demod_reset.lvl = TBSECP3_GPIODEF_LOW,
 				.gpio.demod_reset.nr  = TBSECP3_GPIO_PIN(0, 0),
 			}, 
 			{
 				.ts_in = 1,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 			},
 			{
 				.ts_in = 2,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 			},
 			{
 				.ts_in = 3,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 			},
 			{
 				.ts_in = 4,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 			},
 			{
 				.ts_in = 5,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 			},
 			{
 				.ts_in = 6,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 			},
 			{
 				.ts_in = 7,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 			}
 		}
 	},
@@ -511,6 +519,7 @@ struct tbsecp3_board tbsecp3_boards[] = {
 			{
 				.ts_in = 0,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 				.gpio.demod_reset.lvl = TBSECP3_GPIODEF_LOW,
 				.gpio.demod_reset.nr  = TBSECP3_GPIO_PIN(0, 0),
 				.gpio.lnb_power.lvl   = TBSECP3_GPIODEF_LOW,
@@ -521,6 +530,7 @@ struct tbsecp3_board tbsecp3_boards[] = {
 			{
 				.ts_in = 1,
 				.i2c_bus_nr = 0,
+				.pusi_gse = 1,
 				.gpio.lnb_power.lvl   = TBSECP3_GPIODEF_LOW,
 				.gpio.lnb_power.nr    = TBSECP3_GPIO_PIN(1, 2),
 				.gpio.lnb_voltage.lvl = TBSECP3_GPIODEF_HIGH,

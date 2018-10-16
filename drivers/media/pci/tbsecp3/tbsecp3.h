@@ -87,6 +87,7 @@ struct tbsecp3_adap_config {
         u32 ts_in;
 	u8 i2c_bus_nr;
 	struct tbsecp3_gpio_config gpio;
+	bool pusi_gse;
 };
 
 struct tbsecp3_board {
@@ -133,6 +134,15 @@ struct tbsecp3_ca {
 	int status;
 };
 
+struct gse_info {
+        u16 pos;
+        u16 pkt_cnt;
+	u8 cnt_storage; /* for TS continuity check */
+        bool sofi;
+        bool next_pkt;
+        u8 *gse_buff;
+};
+
 struct tbsecp3_adapter {
 	int nr;
 	struct tbsecp3_adap_config *cfg;
@@ -161,6 +171,9 @@ struct tbsecp3_adapter {
 	spinlock_t adap_lock;
 	struct tasklet_struct tasklet;
 	struct tbsecp3_dma_channel dma;
+
+	/* TS/GSE */
+	struct gse_info gse_info;
 
 	/* ca interface */
 	struct tbsecp3_ca *tbsca;
